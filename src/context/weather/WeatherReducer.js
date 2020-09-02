@@ -1,24 +1,16 @@
 import {
-    GET_CONTACTS,
-    ADD_CONTACT,
-    DELETE_CONTACT,
-    SET_CURRENT,
-    CLEAR_CURRENT,
-    UPDATE_CONTACT,
-    FILTER_CONTACTS,
-    CLEAR_FILTER,
-    CONTACT_ERROR,
-    CLEAR_CONTACTS
-  } from '../types';
+    GET_WEATHER,
+    FETCH_ERROR
+  } from '../../types';
   
   export default (state, action) => {
     switch (action.type) {
-      case GET_CONTACTS:
+      case GET_WEATHER:
         return {
           ...state,
           weather: action.payload,
         };
-      case CONTACT_ERROR:
+      case FETCH_ERROR:
         return {
           ...state,
           error: action.payload
