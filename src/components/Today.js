@@ -15,7 +15,7 @@ const Today = () => {
     const getFiveDayForeCast = () => {
 
         const request = fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=33.9249&lon=18.4241&
-        exclude=hourly,minutely&appid=b1e5771f1fee9ff805922dc8fa240460&units=metric`).then(res => res.json())
+        exclude=hourly,minutely&appid=b1e5771f1fee9ff805922dc8fa240460&units=metric`).then(res => {return res.json()})
         
         return request;
         }
